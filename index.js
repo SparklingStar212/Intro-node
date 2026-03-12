@@ -28,6 +28,10 @@ app.get('/', (req, res) => {
   console.log('Request received at /')
 })
 
+app.get('/home', (req, res) => {
+  res.sendFile(__dirname + "/index.html")
+  })
+
 app.get('/students', (req, res) => {
   res.send(students)
 })
